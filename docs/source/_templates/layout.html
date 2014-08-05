@@ -1,0 +1,45 @@
+{% extends "!layout.html" %}
+
+{%- block extrahead %} 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        jax: ["input/TeX","output/HTML-CSS"], 
+        TeX: {
+              extensions: ["AMSmath.js", "AMSsymbols.js"],
+              Macros: {
+                  gbm: ['{\\boldsymbol{ #1 }}', 1],
+                  bm: ['{\\mathbf{ #1 }}', 1],
+                  tr: '{^\\mathsf{T}}',
+                  argmin: '\\operatorname{argmin}',
+                  argmax: '\\operatorname{argmax}',
+                  E: '{\\mathrm{E}}',
+                  H: '{\\mathcal{H}}',
+                  D: '{\\mathcal{D}}',
+                  Dir: '{\\mathrm{Dir}}',
+                  mm: '{\\bm{m}}',
+                  nn: '{\\bm{n}}',
+                  ww: '{\\bm{w}}',
+                  xx: '{\\bm{x}}',
+                  zz: '{\\bm{z}}',
+                  ttheta: '{\\gbm{\\theta}}',
+                  pphi: '{\\gbm{\\phi}}',
+                },
+               },
+        "HTML-CSS": { 
+            availableFonts: ["TeX"], 
+            preferredFont: "TeX", 
+        }, 
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+        displayAlign: "left",
+        displayIndent: "2em" 
+    });
+</script>
+<style type="text/css">
+    .highlight pre {
+        background: #f8f8f8;
+        border: 1px #ccc;
+        border-style: solid none ;
+    }
+</style>
+{% endblock %}
+
